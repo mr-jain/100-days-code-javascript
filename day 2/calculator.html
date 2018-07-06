@@ -1,0 +1,48 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>Table</title>
+</head>
+<body>
+  <form>
+1st Number : <input type="text" id="firstNumber" /><br>
+2nd Number: <input type="text" id="secondNumber" /><br>
+<input type="button" onClick="multiplication()" Value="Multiply" />
+<input type="button" onClick="divide()" Value="Divide" />
+<input type="button" onClick="sum()" Value="sum" />
+<input type="button" onClick="subtract()" Value="subtract" />
+</form>
+<p>The Result is : <br>
+<span id = "result"></span>
+</p>
+<script>
+function multiplication()
+{
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+        document.getElementById("result").innerHTML = num1 * num2;
+}
+
+function divide() 
+{ 
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+        document.getElementById("result").innerHTML = num1 / num2;
+}
+
+function sum() 
+{ 
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+        document.getElementById("result").innerHTML = parseInt(num1) + parseInt(num2);
+}
+
+function subtract() 
+{ 
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+        document.getElementById("result").innerHTML = num1 - num2;
+}
+</script>
+</body>
+</html>
