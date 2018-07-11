@@ -1,32 +1,32 @@
-function Selection_Sort(arr, compare_Function) {
+//Program of Selection Sort
 
-  function compare(a, b) {
-   return a - b;
-   } 
-  var min = 0;
-  var index = 0;
-  var temp = 0;
-
-  compare_Function = compare_Function || compare;
-
-  for (var i = 0; i < arr.length; i += 1) {
-    index = i;
-    min = arr[i];
-
-    for (var j = i + 1; j < arr.length; j += 1) {
-      if (compare_Function(min, arr[j]) > 0) {
-        min = arr[j];
-        index = j;
-      }
-    }
-
-    temp = arr[i];
-    arr[i] = min;
-    arr[index] = temp;
+var arr = [5,11,7,2,12,3,9,8];
+var small = 0;
+var temp_index = 0;
+console.log(arr);
+for(var j = 0; j<arr.length-1; j++)
+{ 
+if(arr[j]>arr[j+1])
+  {
+   small = arr[j+1];
+   temp_index = j+1;
+  }   
+else 
+  {
+   small = arr[j];
+   temp_index = j;
   }
-
-  //return sorted arr
-  return arr;
+    
+for(var i = j+2; i<arr.length; i++)
+{
+    if(small > arr[i])
+     {
+        small = arr[i];
+        temp_index = i;
+     }        
 }
-
-console.log(Selection_Sort([3, 0, 2, 5, 8, 4, 1], function(a, b) { return a - b; }));
+    arr[temp_index] = arr[j];
+    arr[j] = small;
+} 
+    console.log(arr);
+ 
