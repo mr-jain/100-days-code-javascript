@@ -1,3 +1,4 @@
+//Program to find the occurence of character in  a given string.
 var s = 0;
 function char_frequency(str)
   {
