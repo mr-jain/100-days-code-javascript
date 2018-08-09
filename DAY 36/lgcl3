@@ -1,0 +1,25 @@
+
+class Test extends Exception{}
+ class exception_handling{	
+		
+	public static void main(String[] args) {
+	
+		try {
+			throw new Test();
+		}
+		catch(Test t)
+		{
+			System.out.println("Got the Test Exception");
+		}
+		finally
+		{
+			System.out.println("INside the finally block");
+		}
+	
+	}
+	
+}
+
+//output 
+//Got the Test Exception
+//Inside finally block
