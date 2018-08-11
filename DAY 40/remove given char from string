@@ -1,0 +1,27 @@
+public class test {	
+	
+	public static void main(String[] args) {				
+                removechar a  = new removechar();
+                a.check();
+               
+	}
+	
+ }
+ 
+class removechar {
+	String comp = "TOTHENEW";
+    char c = 'N';    
+    void check()
+    {
+    	 StringBuilder strBuild = new StringBuilder();
+    	for(int i = 0; i< comp.length(); i++)
+    	{
+    		if(comp.charAt(i) != c)
+    		{
+    			strBuild.append(comp.charAt(i));
+    		}
+    	}
+    	System.out.println(strBuild.toString());
+    	
+    }
+}
