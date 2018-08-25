@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main()
+{
+    int metrix1[3][3];
+    int metrix2[3][3];
+    int flag = 1;
+    for(int i =0; i<3; i++)
+    {
+        for(int j= 0; j<3; j++)
+        {
+            scanf("%d",&metrix1[i][j]);
+        }
+    }
+    for(int i =0; i<3; i++)
+    {
+        for(int j= 0; j<3; j++)
+        {
+            scanf("%d",&metrix2[i][j]);
+        }
+        printf("\n");
+    }
+    for(int i =0; i<3; i++)
+    {
+        for(int j= 0; j<3; j++)
+        {
+            if(metrix1[i][j] != metrix2[i][j])
+            {
+                   flag = 0;
+                   break;
+            }       
+        }
+    }
+    if(flag == 1)
+       printf("metrix are identical");
+    else
+       printf("not identical");
+    
+}
